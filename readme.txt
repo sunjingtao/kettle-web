@@ -7,3 +7,7 @@
    http://localhost:8080/kw TO ACCESS.
 3、BROWSERS NOW SUPPORTED ARE IE9 AND GREATER AS WELL AS FIREFOX, IE6-8 ARE PARTIALLY 
    SUPPORTED WITH SPECIAL SETTINGS, OTHER BROWERS HAVEN'T BEEN TESTED YET.
+
+安装说明：
+1、将kettle-webapp项目下的samples和simple-jndi文件copy到tomcat的bin目录下
+2、部署war包启动即可
