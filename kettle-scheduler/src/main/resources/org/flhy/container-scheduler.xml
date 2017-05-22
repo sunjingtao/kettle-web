@@ -12,10 +12,10 @@
 	   http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="org.h2.Driver" />
-		<property name="url" value="jdbc:h2:file:samples/db/schedulerdb;IFEXISTS=TRUE" />
-		<property name="username" value="PENTAHO_USER" />
-		<property name="password" value="PASSWORD" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/hisense_tap?useUnicode=true&amp;characterEncoding=utf-8" />
+		<property name="username" value="root" />
+		<property name="password" value="123456a?" />
 	</bean> 
 	
 	<bean id="quartzJobListener" class="org.flhy.scheduler.listener.QuartzJobListener">
@@ -26,7 +26,7 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean> 
 
-	<bean name="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	<bean name="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" autowire="no">
 		<property name="dataSource" ref="dataSource" />
 		<property name="applicationContextSchedulerContextKey" value="applicationContextKey" />
 		<property name="configLocation" value="classpath:scheduler.properties" />

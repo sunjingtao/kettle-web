@@ -9,5 +9,6 @@
    SUPPORTED WITH SPECIAL SETTINGS, OTHER BROWERS HAVEN'T BEEN TESTED YET.
 
 安装说明：
-1、将kettle-webapp项目下的samples和simple-jndi文件copy到tomcat的bin目录下
-2、部署war包启动即可
+1、创建数据库，并执行kettle-webapp项目src/main/sql/目录下的sql文件初始化表结构（仅在MySQL上测试过）
+2、修改kettle-scheduler项目resources/container-scheduler.xml中的数据库配置
+3、部署war包并启动即可
